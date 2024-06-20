@@ -1,16 +1,84 @@
 {
-  "items": [
+  "businessTrips": [
     {
       "id": 1,
-      "name": "Item 1"
+      "title": "Tech Conference 2024",
+      "description": "Attending the annual Tech Conference to network and learn about the latest in technology.",
+      "destination": "San Francisco, CA",
+      "budget": 1500,
+      "image": ""
     },
     {
       "id": 2,
-      "name": "Item 2"
+      "title": "Client Meeting - ABC Corp",
+      "description": "Meeting with ABC Corp to discuss the new project proposal and finalize the contract.",
+      "destination": "New York, NY",
+      "budget": 1000,
+      "image": ""
     },
     {
-      "name": "Item 3",
-      "id": 3
+      "id": 3,
+      "title": "Marketing Workshop",
+      "description": "Participating in a workshop to enhance our marketing strategies and tools.",
+      "destination": "Chicago, IL",
+      "budget": 800,
+      "image": ""
+    },
+    {
+      "id": 4,
+      "title": "Sales Pitch - XYZ Inc",
+      "description": "Presenting our product to the sales team at XYZ Inc.",
+      "destination": "Dallas, TX",
+      "budget": 1200,
+      "image": ""
+    },
+    {
+      "id": 5,
+      "title": "Team Building Retreat",
+      "description": "A retreat to build teamwork and collaboration within the department.",
+      "destination": "Denver, CO",
+      "budget": 2000,
+      "image": ""
+    },
+    {
+      "id": 6,
+      "title": "International Business Expo",
+      "description": "Exhibiting our products at the International Business Expo.",
+      "destination": "Berlin, Germany",
+      "budget": 3000,
+      "image": ""
+    },
+    {
+      "id": 7,
+      "title": "Partner Collaboration - DEF Ltd",
+      "description": "Collaborating with DEF Ltd on a new joint venture.",
+      "destination": "London, UK",
+      "budget": 2500,
+      "image": ""
+    },
+    {
+      "id": 8,
+      "title": "Product Launch Event",
+      "description": "Hosting an event to launch our new product line.",
+      "destination": "Los Angeles, CA",
+      "budget": 1800,
+      "image": ""
+    },
+    {
+      "id": 9,
+      "title": "Investor Meeting",
+      "description": "Meeting with potential investors to secure funding for the next quarter.",
+      "destination": "Boston, MA",
+      "budget": 1100,
+      "image": ""
+    },
+    {
+      "id": 10,
+      "title": "Training Seminar",
+      "description": "Attending a seminar to get certified in the latest industry standards.",
+      "destination": "Seattle, WA",
+      "budget": 900,
+      "image": ""
     }
   ]
 }
