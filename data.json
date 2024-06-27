@@ -5,16 +5,8 @@
       "title": "Tech Conference 2024",
       "description": "Attending the annual Tech Conference to network and learn about the latest in technology.",
       "destination": "San Francisco, CA",
-      "budget": 1500,
-      "image": ""
-    },
-    {
-      "id": 2,
-      "title": "Client Meeting - ABC Corp",
-      "description": "Meeting with ABC Corp to discuss the new project proposal and finalize the contract.",
-      "destination": "New York, NY",
-      "budget": 1000,
-      "image": ""
+      "budget": 1300,
+      "image": "https://images.unsplash.com/photo-1546942976-1bdf94ffeb1f?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
       "id": 3,
@@ -22,7 +14,7 @@
       "description": "Participating in a workshop to enhance our marketing strategies and tools.",
       "destination": "Chicago, IL",
       "budget": 800,
-      "image": ""
+      "image": "https://images.unsplash.com/photo-1494522855154-9297ac14b55f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
       "id": 4,
@@ -30,7 +22,7 @@
       "description": "Presenting our product to the sales team at XYZ Inc.",
       "destination": "Dallas, TX",
       "budget": 1200,
-      "image": ""
+      "image": "https://images.unsplash.com/photo-1621904878414-d4ca4756bd7e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
       "id": 5,
@@ -38,7 +30,7 @@
       "description": "A retreat to build teamwork and collaboration within the department.",
       "destination": "Denver, CO",
       "budget": 2000,
-      "image": ""
+      "image": "https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?q=80&w=1907&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
       "id": 6,
@@ -46,7 +38,7 @@
       "description": "Exhibiting our products at the International Business Expo.",
       "destination": "Berlin, Germany",
       "budget": 3000,
-      "image": ""
+      "image": "https://images.unsplash.com/photo-1560969184-10fe8719e047?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
       "id": 7,
@@ -54,7 +46,7 @@
       "description": "Collaborating with DEF Ltd on a new joint venture.",
       "destination": "London, UK",
       "budget": 2500,
-      "image": ""
+      "image": "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
       "id": 8,
@@ -62,7 +54,7 @@
       "description": "Hosting an event to launch our new product line.",
       "destination": "Los Angeles, CA",
       "budget": 1800,
-      "image": ""
+      "image": "https://images.unsplash.com/flagged/photo-1575555201693-7cd442b8023f?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
       "id": 9,
@@ -79,6 +71,14 @@
       "destination": "Seattle, WA",
       "budget": 900,
       "image": ""
+    },
+    {
+      "title": "Training Seminar in turkey",
+      "description": "Attending a seminar to get certified in the latest industry standards.",
+      "destination": "Turkey",
+      "budget": 600,
+      "image": "",
+      "id": 11
     }
   ]
 }

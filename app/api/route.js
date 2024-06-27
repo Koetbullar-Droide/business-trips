@@ -21,8 +21,8 @@ export async function GET() {
 export async function POST(req) {
   const newItem = await req.json();
   const currentData = readData();
-  newItem.id = currentData.items.length ? currentData.items[currentData.items.length - 1].id + 1 : 1;
-  currentData.items.push(newItem);
+  newItem.id = currentData.businessTrips.length ? currentData.businessTrips[currentData.businessTrips.length - 1].id + 1 : 1;
+  currentData.businessTrips.push(newItem);
   writeData(currentData);
   return NextResponse.json(newItem, { status: 201 });
 }
@@ -30,11 +30,11 @@ export async function POST(req) {
 export async function PUT(req) {
   const updatedItem = await req.json();
   const dataToUpdate = readData();
-  const index = dataToUpdate.items.findIndex(item => item.id === updatedItem.id);
+  const index = dataToUpdate.businessTrips.findIndex(item => item.id === updatedItem.id);
   if (index === -1) {
     return NextResponse.json({ message: 'Item not found' }, { status: 404 });
   }
-  dataToUpdate.items[index] = updatedItem;
+  dataToUpdate.businessTrips[index] = updatedItem;
   writeData(dataToUpdate);
   return NextResponse.json(updatedItem);
 }
@@ -42,11 +42,11 @@ export async function PUT(req) {
 export async function DELETE(req) {
   const { id } = await req.json();
   const dataToDelete = readData();
-  const filteredData = dataToDelete.items.filter(item => item.id !== id);
-  if (dataToDelete.items.length === filteredData.length) {
+  const filteredData = dataToDelete.businessTrips.filter(item => item.id !== id);
+  if (dataToDelete.businessTrips.length === filteredData.length) {
     return NextResponse.json({ message: 'Item not found' }, { status: 404 });
   }
-  dataToDelete.items = filteredData;
+  dataToDelete.businessTrips = filteredData;
   writeData(dataToDelete);
   return NextResponse.json(null, { status: 204 });
 }

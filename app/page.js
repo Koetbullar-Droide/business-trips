@@ -41,7 +41,7 @@ export default function Home() {
             key={index}
             id={trip.id}
             title={trip.title}
-            date={trip.date}
+            location={trip.destination}
             image={trip.image}
             price={trip.budget}
           />

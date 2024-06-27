@@ -13,7 +13,7 @@ export default function CardComponent (props) {
         <Card sx={{ width: 320 }} className=" m-6">
       <div>
         <Typography level="title-lg">{props.title}</Typography>
-        <Typography level="body-sm">{props.date}</Typography>
+        <Typography level="body-sm">{props.location}</Typography>
         <IconButton
           aria-label="bookmark Bahamas Islands"
           variant="plain"
