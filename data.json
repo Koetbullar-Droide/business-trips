@@ -79,6 +79,22 @@
       "budget": 600,
       "image": "",
       "id": 11
+    },
+    {
+      "title": "Training Seminar in turkey",
+      "description": "Attending a seminar to get certified in the latest industry standards.",
+      "destination": "Turkey",
+      "budget": 600,
+      "image": "",
+      "id": 12
+    },
+    {
+      "title": "Training Seminar in turkey",
+      "description": "Attending a seminar to get certified in the latest industry standards.",
+      "destination": "Turkey",
+      "budget": 800,
+      "image": "",
+      "id": 13
     }
   ]
 }

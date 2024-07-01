@@ -13,11 +13,11 @@ export default function Trip({ params }) {
     const [trip, setTrip] = useState();
 
     useEffect(() => {
-        fetch('/api')
+        fetch('/api/'+params.id)
             .then(response => response.json())
             .then(data => {
                 console.log(data.businessTrips);
-                setTrip(data.businessTrips.find(trip => trip.id == params.id));
+                setTrip(data);
             })
             .catch(error => console.error(error));
         
