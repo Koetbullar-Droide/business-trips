@@ -55,46 +55,6 @@
       "destination": "Los Angeles, CA",
       "budget": 1800,
       "image": "https://images.unsplash.com/flagged/photo-1575555201693-7cd442b8023f?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-    },
-    {
-      "id": 9,
-      "title": "Investor Meeting",
-      "description": "Meeting with potential investors to secure funding for the next quarter.",
-      "destination": "Boston, MA",
-      "budget": 1100,
-      "image": ""
-    },
-    {
-      "id": 10,
-      "title": "Training Seminar",
-      "description": "Attending a seminar to get certified in the latest industry standards.",
-      "destination": "Seattle, WA",
-      "budget": 900,
-      "image": ""
-    },
-    {
-      "title": "Training Seminar in turkey",
-      "description": "Attending a seminar to get certified in the latest industry standards.",
-      "destination": "Turkey",
-      "budget": 600,
-      "image": "",
-      "id": 11
-    },
-    {
-      "title": "Training Seminar in turkey",
-      "description": "Attending a seminar to get certified in the latest industry standards.",
-      "destination": "Turkey",
-      "budget": 600,
-      "image": "",
-      "id": 12
-    },
-    {
-      "title": "Training Seminar in turkey",
-      "description": "Attending a seminar to get certified in the latest industry standards.",
-      "destination": "Turkey",
-      "budget": 800,
-      "image": "",
-      "id": 13
     }
   ]
 }
