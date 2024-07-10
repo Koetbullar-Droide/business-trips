@@ -10,7 +10,7 @@ import Link from '@mui/material/Link';
 
 export default function CardComponent (props) {
     return (
-        <Card sx={{ width: 320 }} className=" m-6">
+        <Card sx={{ width: 320, bgcolor: 'background.level1' }} className=" m-6">
       <div>
         <Typography level="title-lg">{props.title}</Typography>
         <Typography level="body-sm">{props.location}</Typography>

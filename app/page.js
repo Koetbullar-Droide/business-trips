@@ -7,16 +7,16 @@ import Add from '@mui/icons-material/Add';
 import { useState, useEffect } from 'react';
 import CircularProgress from '@mui/joy/CircularProgress';
 import ModalForm from "./(components)/ModalForm";
-import { useColorScheme } from '@mui/joy/styles';
-import Brightness4Icon from '@mui/icons-material/Brightness4';
-import Brightness7Icon from '@mui/icons-material/Brightness7';
+import DarkModeButton from "./(components)/DarkModeButton";
+import Navbar from "./(components)/Navbar";
+
+
 
 
 
 
 export default function Home() {
   const [trips, setTrips] = useState();
-  const { mode, setMode } = useColorScheme();
 
   useEffect(() => {
     fetch('/api')
@@ -31,14 +31,7 @@ export default function Home() {
   return (
 
     <>
-     <div className=" w-full flex justify-between mt-5 px-10">
-        <div className="flex">
-        <h1 className=' text-2xl mr-2'> ✈️</h1><Typography level="h3">BusinessTrips</Typography>
-        </div>
-        <Button onClick={() => setMode(mode === 'dark' ? 'light' : 'dark')} color="inherit">
-          {mode === 'dark' ? <Brightness7Icon sx={{ fontSize: 28 }}/> : <Brightness4Icon sx={{ fontSize: 28 }}/>}
-        </Button>
-      </div>
+     <Navbar/>
     <main className=" px-24">
       
       
@@ -54,7 +47,7 @@ export default function Home() {
       
       
       <div className="flex flex-row justify-center items-center">
-        <Input className=" w-[30vw] rounded-2xl h-10 mr-5" placeholder="Search for a trip" />
+        <Input className=" w-[30vw] rounded-2xl h-10 mr-5" placeholder="Search for a trip" sx={{bgcolor: 'background.level1'}}/>
         <ModalForm />
       </div>
       
