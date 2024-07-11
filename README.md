@@ -1,4 +1,11 @@
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+## Short Impression
+![image](https://github.com/Koetbullar-Droide/business-trips/assets/74729135/19dc95a4-7988-422f-b067-a337a650dbb8)
+![image](https://github.com/Koetbullar-Droide/business-trips/assets/74729135/99c06550-fc88-4f62-b048-41bc4392acbf)
+![image](https://github.com/Koetbullar-Droide/business-trips/assets/74729135/1afe2db3-8c56-47aa-aeb6-ddce44585044)
+
 
 ## Getting Started
 
