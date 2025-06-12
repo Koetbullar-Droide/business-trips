@@ -1,0 +1,25 @@
+.rbc-calendar {
+  background-color: var(--joy-palette-background-body);
+  color: var(--joy-palette-text-primary);
+}
+.rbc-toolbar button {
+  color: var(--joy-palette-text-primary);
+  background-color: var(--joy-palette-background-surface);
+  border: 1px solid var(--joy-palette-divider);
+}
+.rbc-toolbar button.rbc-active,
+.rbc-toolbar button:focus {
+  background-color: var(--joy-palette-background-level1);
+}
+.rbc-event {
+  background-color: var(--joy-palette-primary-solidBg);
+  color: var(--joy-palette-primary-solidColor);
+  border: none;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+.rbc-month-view,
+.rbc-time-view,
+.rbc-agenda-view {
+  background-color: var(--joy-palette-background-surface);
+}

@@ -7,7 +7,8 @@
       "destination": "San Francisco, CA",
       "budget": 1300,
       "image": "https://images.unsplash.com/photo-1546942976-1bdf94ffeb1f?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "date": "2024-05-01"
+      "date": "2024-05-01",
+      "duration": 2
     },
     {
       "id": 3,
@@ -16,7 +17,8 @@
       "destination": "Chicago, IL",
       "budget": 800,
       "image": "https://images.unsplash.com/photo-1494522855154-9297ac14b55f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "date": "2024-05-05"
+      "date": "2024-05-05",
+      "duration": 1
     },
     {
       "id": 4,
@@ -25,7 +27,8 @@
       "destination": "Dallas, TX",
       "budget": 1200,
       "image": "https://images.unsplash.com/photo-1621904878414-d4ca4756bd7e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "date": "2024-05-10"
+      "date": "2024-05-10",
+      "duration": 3
     },
     {
       "id": 5,
@@ -34,7 +37,8 @@
       "destination": "Denver, CO",
       "budget": 2000,
       "image": "https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?q=80&w=1907&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "date": "2024-05-15"
+      "date": "2024-05-15",
+      "duration": 2
     },
     {
       "id": 6,
@@ -43,7 +47,8 @@
       "destination": "Berlin, Germany",
       "budget": 3000,
       "image": "https://images.unsplash.com/photo-1560969184-10fe8719e047?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "date": "2024-05-20"
+      "date": "2024-05-20",
+      "duration": 4
     },
     {
       "id": 7,
@@ -52,7 +57,8 @@
       "destination": "London, UK",
       "budget": 2500,
       "image": "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "date": "2024-05-25"
+      "date": "2024-05-25",
+      "duration": 2
     },
     {
       "id": 8,
@@ -61,7 +67,8 @@
       "destination": "Los Angeles, CA",
       "budget": 1800,
       "image": "https://images.unsplash.com/flagged/photo-1575555201693-7cd442b8023f?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "date": "2024-06-01"
+      "date": "2024-06-01",
+      "duration": 1
     },
     {
       "title": "Cocktails in Bangkok",
@@ -70,7 +77,8 @@
       "budget": 29000,
       "image": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?q=80&w=2700&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "id": 9,
-      "date": "2024-06-05"
+      "date": "2024-06-05",
+      "duration": 3
     },
     {
       "title": "Casino Trip",
@@ -79,7 +87,8 @@
       "budget": 81000,
       "image": "https://images.unsplash.com/photo-1587223043646-fa771d9e0c8b?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "id": 10,
-      "date": "2024-06-10"
+      "date": "2024-06-10",
+      "duration": 2
     }
   ]
 }

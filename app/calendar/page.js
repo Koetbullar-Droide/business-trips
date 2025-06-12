@@ -8,8 +8,10 @@ import format from 'date-fns/format';
 import parse from 'date-fns/parse';
 import startOfWeek from 'date-fns/startOfWeek';
 import getDay from 'date-fns/getDay';
+import addDays from 'date-fns/addDays';
 import enUS from 'date-fns/locale/en-US';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
+import './calendar.css';
 
 const locales = { 'en-US': enUS };
 const localizer = dateFnsLocalizer({ format, parse, startOfWeek, getDay, locales });
@@ -30,7 +32,7 @@ export default function CalendarPage() {
         const ev = data.businessTrips.map(trip => ({
           title: trip.title,
           start: new Date(trip.date),
-          end: new Date(trip.date),
+          end: addDays(new Date(trip.date), (trip.duration || 1) - 1),
           allDay: true,
         }));
         setEvents(ev);
