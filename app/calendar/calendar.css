@@ -11,6 +11,15 @@
 .rbc-toolbar button:focus {
   background-color: var(--joy-palette-background-level1);
 }
+.rbc-toolbar {
+  margin-bottom: 8px;
+}
+.rbc-off-range-bg {
+  background-color: var(--joy-palette-background-level1);
+}
+.rbc-today {
+  background-color: var(--joy-palette-primary-softBg);
+}
 .rbc-event {
   background-color: var(--joy-palette-primary-solidBg);
   color: var(--joy-palette-primary-solidColor);
