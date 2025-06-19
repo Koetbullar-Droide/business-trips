@@ -89,6 +89,36 @@
       "id": 10,
       "date": "2024-06-10",
       "duration": 2
+    },
+    {
+      "id": 11,
+      "title": "Quartalsmeeting Q2",
+      "description": "Wichtiges Meeting zur Besprechung der Q2-Ergebnisse und Planung für Q3",
+      "destination": "München, Deutschland",
+      "budget": 500,
+      "image": "https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "date": "2025-06-23",
+      "duration": 2
+    },
+    {
+      "id": 12,
+      "title": "Kundentermin - ABC GmbH",
+      "description": "Präsentation der neuen Produktlinie bei unserem Großkunden ABC GmbH",
+      "destination": "Hamburg, Deutschland",
+      "budget": 800,
+      "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "date": "2025-06-25",
+      "duration": 1
+    },
+    {
+      "id": 13,
+      "title": "Weiterbildung Digital Marketing",
+      "description": "Seminar über die neuesten Trends im digitalen Marketing",
+      "destination": "Berlin, Deutschland",
+      "budget": 1200,
+      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "date": "2025-06-27",
+      "duration": 3
     }
   ]
 }
