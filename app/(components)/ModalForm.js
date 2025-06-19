@@ -24,6 +24,8 @@ export default function ModalForm() {
         title: '',
         description: '',
         destination: '',
+        date: '',
+        duration: 1,
         budget: 0,
         image: ''
       });
@@ -118,6 +120,14 @@ export default function ModalForm() {
                 <FormControl>
                     <FormLabel>Destination</FormLabel>
                     <Input name="destination" value={formData.destination} onChange={handleChange} required />
+                </FormControl>
+                <FormControl>
+                    <FormLabel>Date</FormLabel>
+                    <Input type="date" name="date" value={formData.date} onChange={handleChange} required />
+                </FormControl>
+                <FormControl>
+                    <FormLabel>Duration (days)</FormLabel>
+                    <Input type="number" name="duration" min="1" value={formData.duration} onChange={handleChange} required />
                 </FormControl>
                 <FormControl>
                     <FormLabel>Budget(CHF)</FormLabel>

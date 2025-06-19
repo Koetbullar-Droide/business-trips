@@ -6,7 +6,9 @@
       "description": "Attending the annual Tech Conference to network and learn about the latest in technology.",
       "destination": "San Francisco, CA",
       "budget": 1300,
-      "image": "https://images.unsplash.com/photo-1546942976-1bdf94ffeb1f?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      "image": "https://images.unsplash.com/photo-1546942976-1bdf94ffeb1f?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "date": "2024-05-01",
+      "duration": 2
     },
     {
       "id": 3,
@@ -14,7 +16,9 @@
       "description": "Participating in a workshop to enhance our marketing strategies and tools.",
       "destination": "Chicago, IL",
       "budget": 800,
-      "image": "https://images.unsplash.com/photo-1494522855154-9297ac14b55f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      "image": "https://images.unsplash.com/photo-1494522855154-9297ac14b55f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "date": "2024-05-05",
+      "duration": 1
     },
     {
       "id": 4,
@@ -22,7 +26,9 @@
       "description": "Presenting our product to the sales team at XYZ Inc.",
       "destination": "Dallas, TX",
       "budget": 1200,
-      "image": "https://images.unsplash.com/photo-1621904878414-d4ca4756bd7e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      "image": "https://images.unsplash.com/photo-1621904878414-d4ca4756bd7e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "date": "2024-05-10",
+      "duration": 3
     },
     {
       "id": 5,
@@ -30,7 +36,9 @@
       "description": "A retreat to build teamwork and collaboration within the department.",
       "destination": "Denver, CO",
       "budget": 2000,
-      "image": "https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?q=80&w=1907&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      "image": "https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?q=80&w=1907&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "date": "2024-05-15",
+      "duration": 2
     },
     {
       "id": 6,
@@ -38,7 +46,9 @@
       "description": "Exhibiting our products at the International Business Expo.",
       "destination": "Berlin, Germany",
       "budget": 3000,
-      "image": "https://images.unsplash.com/photo-1560969184-10fe8719e047?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      "image": "https://images.unsplash.com/photo-1560969184-10fe8719e047?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "date": "2024-05-20",
+      "duration": 4
     },
     {
       "id": 7,
@@ -46,7 +56,9 @@
       "description": "Collaborating with DEF Ltd on a new joint venture.",
       "destination": "London, UK",
       "budget": 2500,
-      "image": "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      "image": "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "date": "2024-05-25",
+      "duration": 2
     },
     {
       "id": 8,
@@ -54,7 +66,9 @@
       "description": "Hosting an event to launch our new product line.",
       "destination": "Los Angeles, CA",
       "budget": 1800,
-      "image": "https://images.unsplash.com/flagged/photo-1575555201693-7cd442b8023f?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      "image": "https://images.unsplash.com/flagged/photo-1575555201693-7cd442b8023f?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "date": "2024-06-01",
+      "duration": 1
     },
     {
       "title": "Cocktails in Bangkok",
@@ -62,7 +76,9 @@
       "destination": "Bangkok, Thailand",
       "budget": 29000,
       "image": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?q=80&w=2700&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "id": 9
+      "id": 9,
+      "date": "2024-06-05",
+      "duration": 3
     },
     {
       "title": "Casino Trip",
@@ -70,7 +86,39 @@
       "destination": "Las Vegas, USA",
       "budget": 81000,
       "image": "https://images.unsplash.com/photo-1587223043646-fa771d9e0c8b?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "id": 10
+      "id": 10,
+      "date": "2024-06-10",
+      "duration": 2
+    },
+    {
+      "id": 11,
+      "title": "Quartalsmeeting Q2",
+      "description": "Wichtiges Meeting zur Besprechung der Q2-Ergebnisse und Planung für Q3",
+      "destination": "München, Deutschland",
+      "budget": 500,
+      "image": "https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "date": "2025-06-23",
+      "duration": 2
+    },
+    {
+      "id": 12,
+      "title": "Kundentermin - ABC GmbH",
+      "description": "Präsentation der neuen Produktlinie bei unserem Großkunden ABC GmbH",
+      "destination": "Hamburg, Deutschland",
+      "budget": 800,
+      "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "date": "2025-06-25",
+      "duration": 1
+    },
+    {
+      "id": 13,
+      "title": "Weiterbildung Digital Marketing",
+      "description": "Seminar über die neuesten Trends im digitalen Marketing",
+      "destination": "Berlin, Deutschland",
+      "budget": 1200,
+      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "date": "2025-06-27",
+      "duration": 3
     }
   ]
 }
