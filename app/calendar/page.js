@@ -14,11 +14,14 @@ import IconButton from "@mui/joy/IconButton";
 import ButtonGroup from "@mui/joy/ButtonGroup";
 import Button from "@mui/joy/Button";
 import Typography from "@mui/joy/Typography";
+import Snackbar from "@mui/joy/Snackbar";
+import AddIcon from "@mui/icons-material/Add";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import "./calendar.css";
+import Form from "./Form";
 
 const locales = { "en-US": enUS };
 const localizer = dateFnsLocalizer({
@@ -60,9 +63,12 @@ function CustomToolbar({ label, onNavigate, onView, views, view }) {
 }
 
 export default function CalendarPage() {
-  const [events, setEvents] = useState();
+  const [events, setEvents] = useState([]);
   const [view, setView] = useState("month");
   const [date, setDate] = useState(new Date());
+  const [modalOpen, setModalOpen] = useState(false);
+  const [form, setForm] = useState({ title: "", date: "", duration: 1 });
+  const [snackbarMessage, setSnackbarMessage] = useState("");
 
   useEffect(() => {
     const lastView = localStorage.getItem("calendarView") || "month";
@@ -74,6 +80,7 @@ export default function CalendarPage() {
       .then((res) => res.json())
       .then((data) => {
         const ev = data.businessTrips.map((trip) => ({
+          id: trip.id || crypto.randomUUID(),
           title: trip.title,
           start: new Date(trip.date),
           end: addDays(new Date(trip.date), (trip.duration || 1) - 1),
@@ -92,6 +99,29 @@ export default function CalendarPage() {
     setDate(newDate);
   };
 
+  const handleAddClick = () => {
+    setForm({ title: "", date: "", duration: 1 });
+    setModalOpen(true);
+  };
+
+  const handleSave = () => {
+    const newEvent = {
+      id: crypto.randomUUID(),
+      title: form.title,
+      start: new Date(form.date),
+      end: addDays(new Date(form.date), form.duration - 1),
+      allDay: true,
+    };
+
+    setEvents((prev) => [...prev, newEvent]);
+    setModalOpen(false);
+    setSnackbarMessage("Ereignis erfolgreich erstellt");
+  };
+
+  const handleCancel = () => {
+    setModalOpen(false);
+  };
+
   const eventPropGetter = () => ({
     style: {
       borderRadius: 4,
@@ -104,8 +134,8 @@ export default function CalendarPage() {
   return (
     <Box className="w-full h-screen">
       <Navbar />
-      <Box className="p-10 h-[90%]">
-        {events ? (
+      <Box className="p-10 h-[90%] relative">
+        {events.length ? (
           <Calendar
             localizer={localizer}
             events={events}
@@ -123,6 +153,37 @@ export default function CalendarPage() {
             <CircularProgress />
           </Box>
         )}
+
+        <IconButton
+          onClick={handleAddClick}
+          color="primary"
+          variant="solid"
+          size="lg"
+          sx={{
+            position: "absolute",
+            bottom: 24,
+            right: 24,
+            borderRadius: "50%",
+          }}
+        >
+          <AddIcon />
+        </IconButton>
+
+        <Form
+          open={modalOpen}
+          onClose={handleCancel}
+          onSave={handleSave}
+          form={form}
+          setForm={setForm}
+        />
+
+        <Snackbar
+          open={!!snackbarMessage}
+          onClose={() => setSnackbarMessage("")}
+          autoHideDuration={3000}
+        >
+          {snackbarMessage}
+        </Snackbar>
       </Box>
     </Box>
   );
