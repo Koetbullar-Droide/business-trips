@@ -1,9 +1,9 @@
 "use client";
-import { useEffect, useState } from "react";
+import {useEffect, useState} from "react";
 import Box from "@mui/joy/Box";
 import CircularProgress from "@mui/joy/CircularProgress";
 import Navbar from "../(components)/Navbar";
-import { Calendar, dateFnsLocalizer } from "react-big-calendar";
+import {Calendar, dateFnsLocalizer} from "react-big-calendar";
 import format from "date-fns/format";
 import parse from "date-fns/parse";
 import startOfWeek from "date-fns/startOfWeek";
@@ -23,168 +23,183 @@ import "react-big-calendar/lib/css/react-big-calendar.css";
 import "./calendar.css";
 import Form from "./Form";
 
-const locales = { "en-US": enUS };
+const locales = {"en-US": enUS};
 const localizer = dateFnsLocalizer({
-  format,
-  parse,
-  startOfWeek,
-  getDay,
-  locales,
+    format, parse, startOfWeek, getDay, locales,
 });
 
-function CustomToolbar({ label, onNavigate, onView, views, view }) {
-  return (
-    <Box className="flex justify-between items-center mb-2">
-      <Box>
-        <IconButton variant="plain" onClick={() => onNavigate("PREV")}>
-          <ArrowBackIosNewIcon />
-        </IconButton>
-        <IconButton variant="plain" onClick={() => onNavigate("TODAY")}>
-          <CalendarTodayIcon />
-        </IconButton>
-        <IconButton variant="plain" onClick={() => onNavigate("NEXT")}>
-          <ArrowForwardIosIcon />
-        </IconButton>
-      </Box>
-      <Typography level="title-lg">{label}</Typography>
-      <ButtonGroup size="sm">
-        {views.map((v) => (
-          <Button
-            key={v}
-            variant={v === view ? "solid" : "outlined"}
-            onClick={() => onView(v)}
-          >
-            {v.charAt(0).toUpperCase() + v.slice(1)}
-          </Button>
-        ))}
-      </ButtonGroup>
-    </Box>
-  );
+function CustomToolbar({label, onNavigate, onView, views, view}) {
+    return (<Box className="flex justify-between items-center mb-2">
+        <Box>
+            <IconButton variant="plain" onClick={() => onNavigate("PREV")}>
+                <ArrowBackIosNewIcon/>
+            </IconButton>
+            <IconButton variant="plain" onClick={() => onNavigate("TODAY")}>
+                <CalendarTodayIcon/>
+            </IconButton>
+            <IconButton variant="plain" onClick={() => onNavigate("NEXT")}>
+                <ArrowForwardIosIcon/>
+            </IconButton>
+        </Box>
+        <Typography level="title-lg">{label}</Typography>
+        <ButtonGroup size="sm">
+            {views.map((v) => (<Button
+                key={v}
+                variant={v === view ? "solid" : "outlined"}
+                onClick={() => onView(v)}
+            >
+                {v.charAt(0).toUpperCase() + v.slice(1)}
+            </Button>))}
+        </ButtonGroup>
+        </Box>
+    );
 }
 
 export default function CalendarPage() {
-  const [events, setEvents] = useState([]);
-  const [view, setView] = useState("month");
-  const [date, setDate] = useState(new Date());
-  const [modalOpen, setModalOpen] = useState(false);
-  const [form, setForm] = useState({ title: "", date: "", duration: 1 });
-  const [snackbarMessage, setSnackbarMessage] = useState("");
+    const [events, setEvents] = useState([]);
+    const [view, setView] = useState("month");
+    const [date, setDate] = useState(new Date());
+    const [modalOpen, setModalOpen] = useState(false);
+    const [form, setForm] = useState({title: "", date: "", duration: 1});
+    const [selectedEvent, setSelectedEvent] = useState(null);
+    const [snackbarMessage, setSnackbarMessage] = useState("");
 
-  useEffect(() => {
-    const lastView = localStorage.getItem("calendarView") || "month";
-    setView(lastView);
-  }, []);
+    useEffect(() => {
+        const lastView = localStorage.getItem("calendarView") || "month";
+        setView(lastView);
+    }, []);
 
-  useEffect(() => {
-    fetch("/api")
-      .then((res) => res.json())
-      .then((data) => {
-        const ev = data.businessTrips.map((trip) => ({
-          id: trip.id || crypto.randomUUID(),
-          title: trip.title,
-          start: new Date(trip.date),
-          end: addDays(new Date(trip.date), (trip.duration || 1) - 1),
-          allDay: true,
-        }));
-        setEvents(ev);
-      });
-  }, []);
+    useEffect(() => {
+        fetch("/api")
+            .then((res) => res.json())
+            .then((data) => {
+                const ev = data.businessTrips.map((trip) => ({
+                    id: trip.id || crypto.randomUUID(),
+                    title: trip.title,
+                    start: new Date(trip.date),
+                    end: addDays(new Date(trip.date), (trip.duration || 1) - 1),
+                    allDay: true,
+                }));
+                setEvents(ev);
+            });
+    }, []);
 
-  const handleViewChange = (v) => {
-    setView(v);
-    localStorage.setItem("calendarView", v);
-  };
-
-  const handleNavigate = (newDate) => {
-    setDate(newDate);
-  };
-
-  const handleAddClick = () => {
-    setForm({ title: "", date: "", duration: 1 });
-    setModalOpen(true);
-  };
-
-  const handleSave = () => {
-    const newEvent = {
-      id: crypto.randomUUID(),
-      title: form.title,
-      start: new Date(form.date),
-      end: addDays(new Date(form.date), form.duration - 1),
-      allDay: true,
+    const handleViewChange = (v) => {
+        setView(v);
+        localStorage.setItem("calendarView", v);
     };
 
-    setEvents((prev) => [...prev, newEvent]);
-    setModalOpen(false);
-    setSnackbarMessage("Ereignis erfolgreich erstellt");
-  };
+    const handleNavigate = (newDate) => {
+        setDate(newDate);
+    };
 
-  const handleCancel = () => {
-    setModalOpen(false);
-  };
+    const handleSelectEvent = (event) => {
+        setSelectedEvent(event);
+        setForm({
+            title: event.title,
+            date: format(event.start, "yyyy-MM-dd"),
+            duration: Math.ceil((event.end - event.start) / (1000 * 60 * 60 * 24)) + 1,
+        });
+        setModalOpen(true);
+    };
 
-  const eventPropGetter = () => ({
-    style: {
-      borderRadius: 4,
-      backgroundColor: "var(--joy-palette-primary-solidBg)",
-      color: "var(--joy-palette-primary-solidColor)",
-      border: "none",
-    },
-  });
+    const handleAddClick = () => {
+        setSelectedEvent(null);
+        setForm({title: "", date: "", duration: 1});
+        setModalOpen(true);
+    };
 
-  return (
-    <Box className="w-full h-screen">
-      <Navbar />
-      <Box className="p-10 h-[90%] relative">
-        {events.length ? (
-          <Calendar
-            localizer={localizer}
-            events={events}
-            view={view}
-            onView={handleViewChange}
-            date={date}
-            onNavigate={handleNavigate}
-            views={["month", "week", "day"]}
-            components={{ toolbar: CustomToolbar }}
-            eventPropGetter={eventPropGetter}
-            style={{ height: "100%" }}
-          />
-        ) : (
-          <Box className="w-full h-full flex items-center justify-center">
-            <CircularProgress />
-          </Box>
-        )}
+    const handleSave = () => {
+        const newEvent = {
+            id: selectedEvent?.id || crypto.randomUUID(),
+            title: form.title,
+            start: new Date(form.date),
+            end: addDays(new Date(form.date), form.duration - 1),
+            allDay: true,
+        };
 
-        <IconButton
-          onClick={handleAddClick}
-          color="primary"
-          variant="solid"
-          size="lg"
-          sx={{
-            position: "absolute",
-            bottom: 24,
-            right: 24,
-            borderRadius: "50%",
-          }}
-        >
-          <AddIcon />
-        </IconButton>
+        const updatedEvents = selectedEvent ? events.map((e) => (e.id === selectedEvent.id ? newEvent : e)) : [...events, newEvent];
 
-        <Form
-          open={modalOpen}
-          onClose={handleCancel}
-          onSave={handleSave}
-          form={form}
-          setForm={setForm}
-        />
+        setEvents(updatedEvents);
+        setModalOpen(false);
+        setSnackbarMessage(selectedEvent ? "Änderungen erfolgreich gespeichert" : "Ereignis erfolgreich erstellt");
+    };
 
-        <Snackbar
-          open={!!snackbarMessage}
-          onClose={() => setSnackbarMessage("")}
-          autoHideDuration={3000}
-        >
-          {snackbarMessage}
-        </Snackbar>
-      </Box>
-    </Box>
-  );
+    const handleCancel = () => {
+        setModalOpen(false);
+    };
+
+    const handleDelete = () => {
+        if (selectedEvent) {
+            setEvents(events.filter((e) => e.id !== selectedEvent.id));
+            setSnackbarMessage("Ereignis gelöscht");
+        }
+        setModalOpen(false);
+    };
+
+    const eventPropGetter = () => ({
+        style: {
+            borderRadius: 4,
+            backgroundColor: "var(--joy-palette-primary-solidBg)",
+            color: "var(--joy-palette-primary-solidColor)",
+            border: "none",
+        },
+    });
+
+    return (<Box className="w-full h-screen">
+            <Navbar/>
+            <Box className="p-10 h-[90%] relative">
+                {events.length ? (
+                    <Calendar
+                        localizer={localizer}
+                        events={events}
+                        view={view}
+                        onView={handleViewChange}
+                        date={date}
+                        onNavigate={handleNavigate}
+                        views={["month", "week", "day"]}
+                        components={{toolbar: CustomToolbar}}
+                        eventPropGetter={eventPropGetter}
+                        onSelectEvent={handleSelectEvent}
+                        style={{height: "100%"}}
+                    />
+                ) : (
+                    <Box className="w-full h-full flex items-center justify-center">
+                        <CircularProgress/>
+                    </Box>
+                )}
+
+                <IconButton
+                    onClick={handleAddClick}
+                    color="primary"
+                    variant="solid"
+                    size="lg"
+                    sx={{
+                        position: "absolute", bottom: 24, right: 24, borderRadius: "50%",
+                    }}
+                >
+                    <AddIcon/>
+                </IconButton>
+
+                <Form
+                    open={modalOpen}
+                    onClose={handleCancel}
+                    onSave={handleSave}
+                    onDelete={handleDelete}
+                    eventData={selectedEvent}
+                    form={form}
+                    setForm={setForm}
+                />
+
+
+                <Snackbar
+                    open={!!snackbarMessage}
+                    onClose={() => setSnackbarMessage("")}
+                    autoHideDuration={3000}
+                >
+                    {snackbarMessage}
+                </Snackbar>
+            </Box>
+        </Box>
+    );
 }
